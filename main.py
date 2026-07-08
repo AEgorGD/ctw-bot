@@ -7,7 +7,7 @@ from grind import (
     get_grind
 )
 
-from telegram_bot import update_post
+from telegram_bot import send_post
 
 
 
@@ -123,7 +123,7 @@ def update_club_post():
     post = create_post(players)
 
 
-    result = update_post(post)
+    result = send_post(post)
 
 
     print(result)
