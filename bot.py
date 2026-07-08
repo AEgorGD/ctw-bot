@@ -8,7 +8,7 @@ from telegram.ext import (
 from main import update_club_post
 
 
-ADMIN_ID = 123456789
+ADMIN_ID = 5478743635
 
 
 async def update_command(
@@ -41,7 +41,7 @@ async def update_command(
 
 
 app = Application.builder().token(
-    "BOT_TOKEN"
+    "8940793675:AAH9KLA-YV_2uaMsr2svOwvURflrNGzr9nk"
 ).build()
 
 
