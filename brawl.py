@@ -27,7 +27,10 @@ def get_club_players():
 
     data = response.json()
 
+    print("STATUS:", response.status_code)
+    print("RESPONSE:", data)
 
+    
     if "members" not in data:
         print("Brawl API error:")
         print(data)
