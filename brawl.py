@@ -28,6 +28,15 @@ def get_club_players():
     data = response.json()
 
 
+    if "members" not in data:
+        print("Brawl API error:")
+        print(data)
+
+        raise Exception(
+            "Не удалось получить участников клуба"
+        )
+
+
     players = []
 
 
@@ -42,10 +51,13 @@ def get_club_players():
         )
 
 
-        player = requests.get(
+        player_response = requests.get(
             player_url,
             headers=HEADERS
-        ).json()
+        )
+
+
+        player = player_response.json()
 
 
         players.append({
