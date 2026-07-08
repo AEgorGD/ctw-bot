@@ -1,0 +1,33 @@
+name: Update CT-W Post
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run update script
+        env:
+          BRAWL_TOKEN: ${{ secrets.BRAWL_TOKEN }}
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
+          MESSAGE_ID: ${{ secrets.MESSAGE_ID }}
+
+        run: |
+          python main.py
