@@ -16,17 +16,11 @@ def update_post(text):
 
 
     data = {
-
         "chat_id": CHAT_ID,
-
         "message_id": MESSAGE_ID,
-
         "text": text,
-
         "parse_mode": "HTML",
-
         "disable_web_page_preview": True
-
     }
 
 
@@ -35,5 +29,7 @@ def update_post(text):
         data=data
     )
 
+
+    print(response.json())
 
     return response.json()
