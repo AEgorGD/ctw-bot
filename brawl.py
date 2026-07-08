@@ -8,7 +8,7 @@ HEADERS = {
 }
 
 
-CLUB_TAG = "#ТЕГ_КЛУБА"
+CLUB_TAG = "#CLYCUUPY"
 
 
 def get_club_players():
