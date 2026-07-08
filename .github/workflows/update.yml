@@ -27,7 +27,6 @@ jobs:
           BRAWL_TOKEN: ${{ secrets.BRAWL_TOKEN }}
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           CHAT_ID: ${{ secrets.CHAT_ID }}
-          MESSAGE_ID: ${{ secrets.MESSAGE_ID }}
 
         run: |
           python main.py
